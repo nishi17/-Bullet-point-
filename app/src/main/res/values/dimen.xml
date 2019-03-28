@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_corner_radius">5dp</dimen>
+    <dimen name="default_shadow_radius">5dp</dimen>
+
+    <dimen name="search_height">46dp</dimen>
+
+    <dimen name="search_key_line_8">8dp</dimen>
+    <dimen name="search_key_line_16">16dp</dimen>
+    <dimen name="search_divider">1dp</dimen>
+
+    <dimen name="search_item_height">56dp</dimen>
+    <dimen name="search_icon">56dp</dimen>
+    <dimen name="search_progress">24dp</dimen>
+    <dimen name="search_text_small">14sp</dimen>
+    <dimen name="search_text_medium">16sp</dimen>
+    <dimen name="search_reveal">24dp</dimen>
+
+    <dimen name="search_filter_margin_top">4dp</dimen>
+    <dimen name="search_filter_margin_start">12dp</dimen>
+
+
+    <dimen name="appinfo_why_top">4dp</dimen>
+
+    <dimen name="appinfo_why_below">12dp</dimen>
+
+
+    <dimen name="button_shadow_height">47dp</dimen>
+    <dimen name="rating_button">35dp</dimen>
+
+
+
+
+</resources>
