@@ -22,9 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|center"
             android:gravity="left|center"
-            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
             android:paddingRight="10dp"
-            android:paddingTop="15dp">
+            android:paddingBottom="15dp">
 
             <LinearLayout
                 android:id="@+id/ll_close"
@@ -34,9 +34,9 @@
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
                 android:paddingRight="30dp"
-                android:paddingTop="3dp">
+                android:paddingBottom="3dp">
 
                 <ImageButton
                     android:id="@+id/iv_close"
@@ -83,8 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center"
             android:text="title_scope_message"
             android:textAllCaps="true"
@@ -96,10 +96,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_black_border"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -125,22 +125,23 @@
                 android:textColor="@android:color/darker_gray"
                 android:textStyle="normal" />
 
+
+
+
         </LinearLayout>
 
 
-
-            <Button
-                android:id="@+id/btn_add"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/raised_selector"
-                android:gravity="center"
-                android:text="Add"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textColor="@android:color/white"
-                android:textStyle="normal" />
-
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/raised_selector"
+            android:gravity="center"
+            android:text="Add"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/white"
+            android:textStyle="normal" />
 
 
     </LinearLayout>

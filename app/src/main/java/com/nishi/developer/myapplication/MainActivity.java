@@ -2,15 +2,14 @@ package com.nishi.developer.myapplication;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,8 +25,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LinearLayout ll_scope_work_view;
-    private TextView edt_scope_work;
+    private TextView edt_scope_work, tv_simple;
     private Context context;
+    private EditText edt_simple;
+    private Button btn_add_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ll_scope_work_view = (LinearLayout) findViewById(R.id.ll_scope_work_view);
 
         edt_scope_work = (TextView) findViewById(R.id.edt_scope_work);
+
+        tv_simple = (TextView) findViewById(R.id.tv_simple);
+        edt_simple = (EditText) findViewById(R.id.edt_simple);
+        btn_add_ = (Button) findViewById(R.id.btn_add_);
+        btn_add_.setOnClickListener(this);
 //        edt_scope_work.setInputType(EditorInfo.TYPE_CLASS_TEXT);
         edt_scope_work.setOnClickListener(this);
     }
@@ -50,6 +56,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 addScopeDialog();
 
+                break;
+
+            case R.id.btn_add_:
+
+                if (edt_simple.getText().toString() != null)
+                    tv_simple.setText(edt_simple.getText().toString());
+                String s = edt_simple.getText().toString();
+                Log.e("simple test", edt_simple.getText().toString());
                 break;
 
         }
@@ -125,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (txt.length() == 0) {
                     edt_scope_bullet.setText("\u2022");
                     edt_scope_bullet.setSelection(edt_scope_bullet.getText().length());
-                    return;
+
                 } else {
 
                     if (countBullets(edt_scope_bullet.getText().toString()) > 11) {
@@ -192,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                            edt_scope_bullet.setImeOptions(EditorInfo.IME_ACTION_DONE);
 //                            hideSoftKeyboard(context,edt_scope_bullet);
 
-                           btn_add.performClick();
+                            btn_add.performClick();
 
                         }
                     } else {
@@ -215,7 +229,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
 
                 edt_scope_bullet.setText("");
-
 
             }
         });
@@ -282,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
 
                     edt_scope_work.setText(tempString);
-
+                    // tv_simple.setText(tempString);
 ////                    edt_scope_work.setText(f1.substring(0,f1.indexOf('\n')));
 //
 //                    try {
